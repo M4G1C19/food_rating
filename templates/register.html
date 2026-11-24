@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card">
+        <h2>Регистрация</h2>
+        <p class="subtitle">Присоединяйтесь к сообществу гурманов</p>
+        {% if error %}<div class="error-msg">{{ error }}</div>{% endif %}
+        <form method="post" action="/register" enctype="multipart/form-data">
+            <div class="input-group">
+                <label>Логин</label>
+                <input type="text" name="username" required>
+            </div>
+            <div class="input-group">
+                <label>Пароль</label>
+                <input type="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label>Аватар</label>
+                <input type="file" name="avatar" accept="image/*" required>
+            </div>
+            <button type="submit" class="auth-btn">Создать аккаунт</button>
+        </form>
+        <p class="switch-link">Уже есть аккаунт? <a href="/login">Войти</a></p>
+    </div>
+</div>
+{% endblock %}

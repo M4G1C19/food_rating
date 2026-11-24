@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="admin-panel">
+    <h2>Добавить новое блюдо</h2>
+    <form method="post" action="/edit" enctype="multipart/form-data" class="admin-form">
+        <div class="row">
+            <input type="text" name="name" placeholder="Название блюда" required>
+            <input type="text" name="country" placeholder="Страна" required>
+        </div>
+        <input type="text" name="ingredients" placeholder="Ингредиенты (через запятую)" required>
+        <input type="number" step="0.1" min="0" max="10" name="rating" placeholder="Оценка (0-10)" required>
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit" class="auth-btn">Добавить</button>
+    </form>
+
+    <h2>Существующие блюда</h2>
+    <div class="admin-list">
+        {% for food in foods %}
+        <div class="admin-item">
+            <span>{{ food.name }} ({{ food.rating }}/10)</span>
+            <a href="/delete/{{ food.id }}" class="delete-btn">Удалить</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

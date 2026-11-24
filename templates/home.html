@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="hero">
+    <h1>Лучшие блюда мира</h1>
+    <p>Оценивайте, готовьте, наслаждайтесь</p>
+</div>
+
+<div class="search-container">
+    <input type="text" id="search-input" placeholder="🔍 Поиск по названию, стране или ингредиентам...">
+</div>
+
+<div class="food-grid" id="food-grid">
+    {% if not foods %}
+        <p style="text-align:center; width:100%; grid-column: 1 / -1; color: #888; font-size: 18px; margin-top: 20px;">
+            Пока нет блюд. Админ скоро добавит!
+        </p>
+    {% endif %}
+    
+    {% for food in foods %}
+    <div class="food-card">
+        <img src="{{ food.image }}" alt="{{ food.name }}" onerror="this.src='/images/default.png'">
+        <div class="food-info">
+            <h3>{{ food.name }}</h3>
+            <p class="country">📍 {{ food.country }}</p>
+            <p class="ingredients">{{ food.ingredients }}</p>
+            <div class="rating">
+                <span class="stars">⭐</span> <b>{{ food.rating }}</b> / 10
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

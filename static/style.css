@@ -1,0 +1,82 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+body { background: #f4f7f6; color: #333; }
+
+header { background: #1e1e2f; color: white; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.logo { font-size: 24px; font-weight: 700; letter-spacing: 1px; }
+nav a { color: #ccc; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+nav a:hover { color: #ff7f50; }
+.register-btn { background: #ff7f50; color: white; padding: 8px 20px; border-radius: 25px; }
+.logout-btn { color: #ff4d4d; }
+
+.hero { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, #ff7f50 0%, #ffb347 100%); color: white; border-radius: 0 0 40px 40px; margin-bottom: 40px; }
+.hero h1 { font-size: 48px; margin-bottom: 10px; }
+.hero p { font-size: 18px; opacity: 0.9; }
+
+.food-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; padding: 0 40px 40px; }
+.food-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
+.food-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+.food-card img { width: 100%; height: 220px; object-fit: cover; }
+.food-info { padding: 20px; }
+.food-info h3 { font-size: 22px; margin-bottom: 5px; }
+.country { color: #888; font-size: 14px; margin-bottom: 10px; }
+.ingredients { font-size: 14px; color: #666; margin-bottom: 20px; line-height: 1.5; }
+.rating { background: #fff3cd; padding: 10px; border-radius: 10px; text-align: center; font-size: 18px; color: #856404; }
+.auth-container { min-height: 80vh; display: flex; justify-content: center; align-items: center; }
+.auth-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+.auth-card h2 { text-align: center; margin-bottom: 5px; color: #1e1e2f; }
+.subtitle { text-align: center; color: #888; margin-bottom: 30px; font-size: 14px; }
+.input-group { margin-bottom: 20px; }
+.input-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 14px; color: #444; }
+.input-group input { width: 100%; padding: 12px 15px; border: 2px solid #eee; border-radius: 10px; font-size: 16px; transition: 0.3s; outline: none; }
+.input-group input:focus { border-color: #ff7f50; box-shadow: 0 0 0 4px rgba(255,127,80,0.1); }
+.auth-btn { width: 100%; padding: 14px; background: #ff7f50; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; transition: 0.3s; }
+.auth-btn:hover { background: #e0663c; transform: translateY(-2px); }
+.switch-link { text-align: center; margin-top: 20px; font-size: 14px; color: #666; }
+.switch-link a { color: #ff7f50; text-decoration: none; font-weight: 600; }
+.error-msg { background: #ffe6e6; color: #cc0000; padding: 10px; border-radius: 8px; margin-bottom: 20px; text-align: center; font-size: 14px; }
+.admin-panel { max-width: 800px; margin: 40px auto; padding: 30px; background: white; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.admin-form { display: flex; flex-direction: column; gap: 15px; margin-bottom: 40px; }
+.row { display: flex; gap: 15px; }
+.row input { flex: 1; }
+.admin-form input { padding: 12px; border: 2px solid #eee; border-radius: 10px; outline: none; }
+.admin-form input:focus { border-color: #ff7f50; }
+.admin-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid #eee; }
+.delete-btn { color: #ff4d4d; text-decoration: none; font-weight: 600; font-size: 14px; }
+
+.profile-container { max-width: 400px; margin: 60px auto; text-align: center; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.profile-avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 4px solid #ff7f50; }
+.profile-info p { margin: 10px 0; font-size: 18px; }
+
+.error-page { text-align: center; margin-top: 100px; }
+.error-page h1 { font-size: 100px; color: #ff7f50; }
+.error-page p { color: #666; margin-bottom: 20px; }
+
+.search-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#search-input {
+    width: 60%;
+    max-width: 500px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: 2px solid #eee;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+#search-input:focus {
+    border-color: #ff7f50;
+    box-shadow: 0 5px 20px rgba(255, 127, 80, 0.2);
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 40px 40px;
+    justify-content: center;
+}
