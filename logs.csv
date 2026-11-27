@@ -96,3 +96,29 @@ timestamp,user,action,path2026-11-24 19:37:10,guest,GET Request,/
 2026-11-24 20:18:45,admin,GET Request,/
 2026-11-24 20:18:48,admin,GET Request,/edit
 2026-11-24 20:18:50,admin,GET Request,/profile
+2026-11-27 19:33:31,guest,GET Request,/
+2026-11-27 19:33:32,guest,GET Request,/
+2026-11-27 19:33:33,guest,GET Request,/favicon.ico
+2026-11-27 19:34:23,guest,GET Request,/
+2026-11-27 19:34:24,guest,GET Request,/favicon.ico
+2026-11-27 19:44:02,guest,GET Request,/login
+2026-11-27 19:45:07,guest,GET Request,/login
+2026-11-27 19:45:07,admin,LOGIN_SUCCESS,/login
+2026-11-27 19:45:07,admin,GET Request,/
+2026-11-27 19:45:11,admin,GET Request,/edit
+2026-11-27 19:45:31,admin,GET Request,/profile
+2026-11-27 19:45:51,admin,GET Request,/
+2026-11-27 19:45:54,admin,GET Request,/logout
+2026-11-27 19:45:54,admin,LOGOUT,/logout
+2026-11-27 19:45:54,guest,GET Request,/
+2026-11-27 19:45:56,guest,GET Request,/register
+2026-11-27 19:48:26,guest,GET Request,/register
+2026-11-27 19:48:26,Vladik,REGISTER,/register
+2026-11-27 19:48:26,Vladik,GET Request,/
+2026-11-27 19:48:31,Vladik,GET Request,/profile
+2026-11-27 19:48:52,Vladik,GET Request,/
+2026-11-27 19:49:28,Vladik,GET Request,/profile
+2026-11-27 19:49:29,Vladik,GET Request,/
+2026-11-27 19:49:31,Vladik,GET Request,/logout
+2026-11-27 19:49:31,Vladik,LOGOUT,/logout
+2026-11-27 19:49:31,guest,GET Request,/
